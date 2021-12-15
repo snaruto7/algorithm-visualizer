@@ -12,8 +12,8 @@ export function getSelectionSortAnimations(arr) {
                 min = j;
             }
         }
-        animations.push([[i, copy[min]], true]);
         animations.push([[min, copy[i]], true]);
+        animations.push([[i, copy[min]], true]);
         swap(copy, min, i); 
     }
     return animations;

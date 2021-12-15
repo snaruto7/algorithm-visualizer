@@ -5,6 +5,11 @@ import { getBubbleSortAnimations } from '../algorithms/sorting/BubbleSort';
 import { getQuickSortAnimations } from '../algorithms/sorting/QuickSort';
 import { getMergeSortAnimations } from '../algorithms/sorting/MergeSort';
 import { getSelectionSortAnimations } from '../algorithms/sorting/SelectionSort';
+import { getOptimizedBubbleSortAnimations } from '../algorithms/sorting/OptimizedBubbleSort';
+import { getHeapSortAnimations } from '../algorithms/sorting/HeapSort';
+import { getCocktailSortAnimations } from '../algorithms/sorting/CocktailSort';
+import { getCombSortAnimations } from '../algorithms/sorting/CombSort';
+import { getPancakeSortAnimations } from '../algorithms/sorting/PancakeSort';
 
 const ARR_LEN = 100;
 const MIN_NUM = 5;
@@ -64,6 +69,31 @@ export default function SortVisualizer() {
 
     function selectionSort(){
       const animations = getSelectionSortAnimations(arr);
+      animateArrayUpdate(animations);
+    }
+
+    function optimizedBubbleSort(){
+      const animations = getOptimizedBubbleSortAnimations(arr);
+      animateArrayUpdate(animations)
+    }
+
+    function heapSort(){
+      const animations = getHeapSortAnimations(arr);
+      animateArrayUpdate(animations);
+    }
+
+    function cocktailSort(){
+      const animations = getCocktailSortAnimations(arr);
+      animateArrayUpdate(animations)
+    }
+
+    function combSort(){
+      const animations = getCombSortAnimations(arr);
+      animateArrayUpdate(animations);
+    }
+
+    function pancakeSort(){
+      const animations = getPancakeSortAnimations(arr);
       animateArrayUpdate(animations);
     }
 
@@ -173,6 +203,31 @@ export default function SortVisualizer() {
               <li>
                 <button className="app-button" onClick={selectionSort}>
                   Selection sort
+                </button>
+              </li>
+              <li>
+                <button className="app-button" onClick={optimizedBubbleSort}>
+                  Opt Bubble sort
+                </button>
+              </li>
+              <li>
+                <button className="app-button" onClick={heapSort}>
+                  Heap sort
+                </button>
+              </li>
+              <li>
+                <button className="app-button" onClick={cocktailSort}>
+                  Cocktail sort
+                </button>
+              </li>
+              <li>
+                <button className="app-button" onClick={combSort}>
+                  Comb sort
+                </button>
+              </li>
+              <li>
+                <button className="app-button" onClick={pancakeSort}>
+                  Pancake sort
                 </button>
               </li>
             </ul>

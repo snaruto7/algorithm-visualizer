@@ -1,5 +1,5 @@
 import React from "react";
-import SortVisualizer from "./sortVisualizer/SoftVisualizer";
+import SortVisualizer from "./sortVisualizer/SortVisualizer";
 
 function App() {
   return (
